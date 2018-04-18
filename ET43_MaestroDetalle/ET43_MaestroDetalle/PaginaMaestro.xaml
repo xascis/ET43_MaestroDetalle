@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ET43_MaestroDetalle.PaginaMaestro"
+             xmlns:pages ="clr-namespace:ET43_MaestroDetalle"
+             Title="Página Maestro"
+             x:Name="masterPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, WinPhone">0</On>
+            <On Platform="iOS">0, 20, 0, 0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <Frame OutlineColor="Aqua">
+        <StackLayout Orientation="Vertical"
+                     Spacing="0"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label Text="{Binding Source={x:Reference masterPage}, Path=Width, StringFormat='Master: {0:F0}'}" FontSize="Large" />
+            <Label Text="{Binding Source={x:Reference masterPage}, Path=Height, StringFormat=' &#x00D7; {0:F0}'}" FontSize="Large" />
+        </StackLayout>
+    </Frame>
+</ContentPage>

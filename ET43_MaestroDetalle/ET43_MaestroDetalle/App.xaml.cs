@@ -13,7 +13,7 @@ namespace ET43_MaestroDetalle
 		{
 			InitializeComponent();
 
-			MainPage = new ET43_MaestroDetalle.MainPage();
+			MainPage = new ET43_MaestroDetalle.PaginaPrincipal(); // carga la páina principal al iniciar la aplicación
 		}
 
 		protected override void OnStart ()
